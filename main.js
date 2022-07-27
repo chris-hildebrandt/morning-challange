@@ -21,5 +21,9 @@ function isPalindrome(str) {
   }
 }
 
+// single line solution
+function reverseCheck(str){
+return str == str.split('').reverse().join('')
+}
 
 console.log("javascript running");
