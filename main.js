@@ -27,3 +27,18 @@ return str == str.split('').reverse().join('')
 }
 
 console.log("javascript running");
+
+//example:
+  // mostCommonLetter('hello') => 'l'
+  function mostCommonLetter(str) {
+    // let duplicates = {char, frequency}
+    let alphabet = {}
+    for(i = 0; i < str.length; i++){
+    let letter = str[i]
+    if(alphabet[letter]){
+      alphabet[letter]++
+    } else {
+      alphabet[letter] = 1
+    }
+  }
+}
