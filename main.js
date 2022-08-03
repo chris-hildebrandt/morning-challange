@@ -1,6 +1,6 @@
 function palindrome(str) {
   let backword = ""
-  for (let i = str.length-1; i >= 0; i--) {
+  for (let i = str.length - 1; i >= 0; i--) {
     backword += str[i]
   }
   console.log(backword);
@@ -22,23 +22,38 @@ function isPalindrome(str) {
 }
 
 // single line solution
-function reverseCheck(str){
-return str == str.split('').reverse().join('')
+function reverseCheck(str) {
+  return str == str.split('').reverse().join('')
 }
 
 console.log("javascript running");
 
 //example:
-  // mostCommonLetter('hello') => 'l'
-  function mostCommonLetter(str) {
-    // let duplicates = {char, frequency}
-    let alphabet = {}
-    for(i = 0; i < str.length; i++){
+// mostCommonLetter('hello') => 'l'
+function mostCommonLetter(str) {
+  // let duplicates = {char, frequency}
+  let alphabet = {}
+  for (i = 0; i < str.length; i++) {
     let letter = str[i]
-    if(alphabet[letter]){
+    if (alphabet[letter]) {
       alphabet[letter]++
     } else {
       alphabet[letter] = 1
     }
   }
+  let letters = []
+  alphabet.forEach(letter => letters.push(letter[value]))
+  letters.sort((a,b) => a-b)
+  
 }
+
+function factorialize(num) {
+  let factors = []
+  for (i = 1; i <= num; i++) {
+    if (num % i == 0) {
+      factors.push(i)
+    }
+  }
+  return (factors)
+}
+
