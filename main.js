@@ -88,3 +88,11 @@ function betterMethod(strG, strE) {
   let badTotal = 0
   badSide.forEach((t, i) => { badTotal += strE[i * t] })
 }
+
+function phoneBill(){
+let bubbles = 91.44 + 46.92 
+let dan = 46.65 + 36.54
+let chris = 55.25 + 88.31
+let total = chris + dan + bubbles
+return total
+}
