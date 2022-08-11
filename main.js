@@ -89,10 +89,37 @@ function betterMethod(strG, strE) {
   badSide.forEach((t, i) => { badTotal += strE[i * t] })
 }
 
-function phoneBill(){
-let bubbles = 91.44 + 46.92 
-let dan = 46.65 + 36.54
-let chris = 55.25 + 88.31
-let total = chris + dan + bubbles
-return total
+function phoneBill() {
+  let bubbles = 91.44 + 46.92
+  let dan = 46.65 + 36.54
+  let chris = 55.25 + 88.31
+  let total = chris + dan + bubbles
+  return total
+}
+
+function isTriangle(num1, num2, num3) {
+  if (num1 > num2 + num3) {
+    return "false"
+  }
+  else if (num2 > num1 + num3) {
+    return "false"
+  }
+  else if (num3 > num1 + num2) {
+    return "false"
+  } else {
+    return "true"
+  }
+
+  let option1 = num1 + num2
+  let option2 = num2 + num3
+  let option3 = num3 + num1
+
+  if(option1 >= num3 && option2 >= num2 && option3 >= num1) {
+    return true
+  } return false
+
+
+  isTriangleBetter(num1, num2, num3,){
+    if(Math.min(num1, num2, num3))
+  }
 }
