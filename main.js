@@ -42,7 +42,7 @@ function mostCommonLetter(str) {
     }
   }
   let letters = []
-  alphabet.forEach(letter => letters.push(letter[value]))
+  alphabet.forEach(letter => letters.push(letter['value']))
   letters.sort((a, b) => a - b)
 
 }
@@ -114,12 +114,20 @@ function isTriangle(num1, num2, num3) {
   let option2 = num2 + num3
   let option3 = num3 + num1
 
-  if(option1 >= num3 && option2 >= num2 && option3 >= num1) {
+  if (option1 >= num3 && option2 >= num2 && option3 >= num1) {
     return true
   } return false
+}
 
-
-  isTriangleBetter(num1, num2, num3,){
-    if(Math.min(num1, num2, num3))
+function isTriangleBetter(num1, num2, num3,){
+  if (Math.min(num1, num2, num3)) {
+    return
   }
+}
+
+// repeater code
+function repeaterCode(arr) {
+  let col = []
+  for( let i = 0; i < arr[0].length; i++) {arr.forEach(str => col.push( str[i])) 
+}
 }
