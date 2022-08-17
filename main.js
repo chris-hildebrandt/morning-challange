@@ -119,7 +119,7 @@ function isTriangle(num1, num2, num3) {
   } return false
 }
 
-function isTriangleBetter(num1, num2, num3,){
+function isTriangleBetter(num1, num2, num3,) {
   if (Math.min(num1, num2, num3)) {
     return
   }
@@ -128,6 +128,42 @@ function isTriangleBetter(num1, num2, num3,){
 // repeater code
 function repeaterCode(arr) {
   let col = []
-  for( let i = 0; i < arr[0].length; i++) {arr.forEach(str => col.push( str[i])) 
+  for (let i = 0; i < arr[0].length; i++) {
+    arr.forEach(str => col.push(str[i]))
+  }
 }
+
+function diffArray(arr1, arr2) {
+  const newArr = []
+  let obj = {}
+  arr2.forEach(val => obj[val] = val)
+  arr1.forEach(val => {
+    if (!obj[val]) {
+      newArr.push(val)
+    }
+  })
+  return newArr
+
+  // function diffArray(arr1, arr2) {
+  //   const newArr = []
+  //   let longArr = []
+  //   if(arr1.length < arr2.length){
+  //     longArr = arr2 && newArr = arr1 } else longArr = arr2 && newArr = arr1
+  //   for(let i = 0; i < longArr.length; i++){
+  //     if longArr[i] == !shortArr.find()
+  //   }
+  //   return newArr;
+  // }
+
+  // diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+  // longestArray = arr1.length > arr2.length ? arr1 : arr2
+  // shortestArray = arr1.length < arr2.length ? arr1 : arr2
+
+  function diffArray(arr1, arr2) {
+    return [...diff(arr1, arr2), ...diffArray(arr2, arr1)]
+    function diff(a, b) {
+      return a.filter(item => b.indexOf(item) == -1)
+    }
+  }
 }
